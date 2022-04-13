@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { MainComponent } from './Components/main/main.component';
 import { FooterComponent } from './Components/footer/footer.component';
-import {CustomComponent} from './Components/custom/custom.component'
+import {CustomComponent} from './Components/custom/custom.component';
+import { BootstrapCComponent } from './Components/bootstrap-c/bootstrap-c.component'
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {CustomComponent} from './Components/custom/custom.component'
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    CustomComponent
+    CustomComponent,
+    BootstrapCComponent
   ],
   imports: [
     BrowserModule,

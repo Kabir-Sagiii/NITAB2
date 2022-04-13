@@ -1,0 +1,16 @@
+.mainContainer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.subContainer {
+    margin-top: 80px;
+}
+
+#b1 {
+    border: none;
+    background-color: blueviolet;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+}
