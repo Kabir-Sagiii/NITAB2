@@ -7,7 +7,10 @@ import { HeaderComponent } from './Components/header/header.component';
 import { MainComponent } from './Components/main/main.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import {CustomComponent} from './Components/custom/custom.component';
-import { BootstrapCComponent } from './Components/bootstrap-c/bootstrap-c.component'
+import { BootstrapCComponent } from './Components/bootstrap-c/bootstrap-c.component';
+import { GridsystemComponent } from './Components/gridsystem/gridsystem.component';
+import { AmazongridComponent } from './Components/amazongrid/amazongrid.component';
+import { CardsComponent } from './Components/cards/cards.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { BootstrapCComponent } from './Components/bootstrap-c/bootstrap-c.compon
     MainComponent,
     FooterComponent,
     CustomComponent,
-    BootstrapCComponent
+    BootstrapCComponent,
+    GridsystemComponent,
+    AmazongridComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
