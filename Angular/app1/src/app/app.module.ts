@@ -10,7 +10,13 @@ import {CustomComponent} from './Components/custom/custom.component';
 import { BootstrapCComponent } from './Components/bootstrap-c/bootstrap-c.component';
 import { GridsystemComponent } from './Components/gridsystem/gridsystem.component';
 import { AmazongridComponent } from './Components/amazongrid/amazongrid.component';
-import { CardsComponent } from './Components/cards/cards.component'
+import { CardsComponent } from './Components/cards/cards.component';
+import { GithubhomeComponent } from './Components/GithubSearch/githubhome/githubhome.component';
+import { GithubsearchComponent } from './Components/GithubSearch/githubsearch/githubsearch.component';
+import { GithubprofileComponent } from './Components/GithubSearch/githubprofile/githubprofile.component';
+import { GithubdetailsComponent } from './Components/GithubSearch/githubdetails/githubdetails.component';
+import { OnewayDBComponent } from './Components/oneway-db/oneway-db.component';
+import { NavbarComponent } from './Components/navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { CardsComponent } from './Components/cards/cards.component'
     BootstrapCComponent,
     GridsystemComponent,
     AmazongridComponent,
-    CardsComponent
+    CardsComponent,
+    GithubhomeComponent,
+    GithubsearchComponent,
+    GithubprofileComponent,
+    GithubdetailsComponent,
+    OnewayDBComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

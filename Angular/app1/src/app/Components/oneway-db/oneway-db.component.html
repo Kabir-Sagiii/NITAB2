@@ -1,0 +1,65 @@
+<div class="container mt-5">
+  <div class="row">
+    <h2>Event Binding</h2>
+    <div class="col-4 d-flex">
+      <input
+        type="text"
+        placeholder="Enter Text"
+        class="form-control"
+        #inputRef
+      />
+      <button class="btn btn-success mx-2" (click)="getData(inputRef)">
+        Submit
+      </button>
+    </div>
+    <p class="lead mt-2">{{ textData }}</p>
+
+    <div class="col-4"></div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h4>Show / Hide Password</h4>
+        </div>
+        <div class="card-body">
+          <input
+            [type]="typeValue"
+            placeholder="Enter Password"
+            class="form-control"
+          />
+
+          <button (click)="changeType()" class="btn btn-outline-danger mt-2">
+            {{ buttonText }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4">
+      <img [src]="productDetails.image" width="100%" height="100%" />
+    </div>
+    <div class="col-8">
+      <dl>
+        <dt>Product Name</dt>
+        <dd>{{ productDetails.pname }}</dd>
+        <dt>Description</dt>
+        <dd>{{ productDetails.description }}</dd>
+        <dt>Price</dt>
+        <dd>{{ productDetails.price }}</dd>
+        <dt>Quantity</dt>
+        <dd>{{ productDetails.qty }}</dd>
+      </dl>
+      <button class="btn btn-outline-primary" (click)="changeData()">
+        Change Data
+      </button>
+    </div>
+  </div>
+</div>
