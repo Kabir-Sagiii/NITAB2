@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <h2>Product Details</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat
+      iure sunt rem voluptate itaque provident exercitationem? Facilis
+      reiciendis culpa minima sapiente eos voluptates totam provident,
+      necessitatibus cum ea tempore tenetur hic! Temporibus odio, itaque nemo
+      delectus ipsum cupiditate beatae nesciunt officiis sequi ducimus quibusdam
+      necessitatibus nobis reprehenderit possimus excepturi, amet fuga! Hic
+      veritatis aliquid, libero dolorem atque eos non magni ipsam qui, commodi
+      natus culpa voluptatibus eveniet, recusandae alias?
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover">
+        <thead class="table-dark text-white">
+          <tr>
+            <th>IMAGE</th>
+            <th>ID</th>
+
+            <th>PRODUCT NAME</th>
+            <th>PRICE</th>
+            <th>CATEGORY</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let prod of products">
+            <td>
+              <img [src]="prod.image" height="100" width="100" />
+            </td>
+            <td>
+              {{ prod.id }}
+            </td>
+            <td>
+              {{ prod.title }}
+            </td>
+            <td>
+              {{ prod.price }}
+            </td>
+            <td>
+              {{ prod.category }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

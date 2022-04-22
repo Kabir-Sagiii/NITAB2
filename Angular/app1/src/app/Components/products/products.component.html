@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h2>All Products Information</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, illo?
+        Quia sint dolores autem id corrupti repellendus voluptatum itaque
+        recusandae nesciunt praesentium cumque sunt quod incidunt, aperiam
+        fugit, officia dolorem ex impedit eius eum porro animi voluptas rem
+        aliquam? Tempore repellat in id voluptates deserunt, eius, voluptatum
+        qui aspernatur laboriosam vel aliquam amet animi repellendus doloribus
+        quibusdam minima beatae cumque ut quae molestias nulla assumenda. Ipsa
+        placeat mollitia explicabo ad quam pariatur, porro, magnam blanditiis,
+        sunt odio quaerat sit molestiae.
+      </p>
+      <button class="btn btn-primary" (click)="getProductsDataFromServer()">
+        Get Products
+      </button>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <table class="table">
+      <tr>
+        <th [attr.colspan]="colspanValue">Product Details</th>
+      </tr>
+      <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>{{ products[0].id }}</td>
+        <td>{{ products[0].title }}</td>
+        <td>{{ products[0].price }}</td>
+      </tr>
+      <tr>
+        <td>{{ products[1].id }}</td>
+        <td>{{ products[1].title }}</td>
+        <td>{{ products[1].price }}</td>
+      </tr>
+      <tr>
+        <td>{{ products[2].id }}</td>
+        <td>{{ products[2].title }}</td>
+        <td>{{ products[2].price }}</td>
+      </tr>
+      <tr>
+        <td>{{ products[3].id }}</td>
+        <td>{{ products[3].title }}</td>
+        <td>{{ products[3].price }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

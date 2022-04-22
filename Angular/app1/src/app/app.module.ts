@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,13 @@ import { GithubsearchComponent } from './Components/GithubSearch/githubsearch/gi
 import { GithubprofileComponent } from './Components/GithubSearch/githubprofile/githubprofile.component';
 import { GithubdetailsComponent } from './Components/GithubSearch/githubdetails/githubdetails.component';
 import { OnewayDBComponent } from './Components/oneway-db/oneway-db.component';
-import { NavbarComponent } from './Components/navbar/navbar.component'
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { AComponent } from './Components/a/a.component';
+import { ProductsComponent } from './Components/products/products.component';
+import { AttributebindingComponent } from './Components/attributebinding/attributebinding.component';
+import { TwowayDBComponent } from './Components/twoway-db/twoway-db.component';
+import { NgifComponent } from './Components/ngif/ngif.component';
+import { NgforComponent } from './Components/ngfor/ngfor.component'
 
 @NgModule({
   declarations: [
@@ -34,11 +41,18 @@ import { NavbarComponent } from './Components/navbar/navbar.component'
     GithubprofileComponent,
     GithubdetailsComponent,
     OnewayDBComponent,
-    NavbarComponent
+    NavbarComponent,
+    AComponent,
+    ProductsComponent,
+    AttributebindingComponent,
+    TwowayDBComponent,
+    NgifComponent,
+    NgforComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

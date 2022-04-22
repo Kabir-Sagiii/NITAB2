@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="row bg-primary text-white p-5 my-2" *ngIf="angularPara">
+    <div class="col">
+      <h2>Angular</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quas
+        omnis illo vero, at blanditiis sequi quis consequuntur, expedita
+        possimus nisi hic, perspiciatis architecto quisquam? Repudiandae numquam
+        amet aliquid! Dolorum magnam cupiditate quis voluptatem nostrum
+        repudiandae ipsa ipsum blanditiis sequi?
+      </p>
+    </div>
+  </div>
+
+  <div class="row bg-dark text-white p-5 my-2" *ngIf="reactPara">
+    <div class="col">
+      <h2>React</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quas
+        omnis illo vero, at blanditiis sequi quis consequuntur, expedita
+        possimus nisi hic, perspiciatis architecto quisquam? Repudiandae numquam
+        amet aliquid! Dolorum magnam cupiditate quis voluptatem nostrum
+        repudiandae ipsa ipsum blanditiis sequi?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <button class="btn btn-secondary" (click)="showReact()">
+        Show React
+      </button>
+      <button class="btn btn-success mx-4" (click)="showAngular()">
+        Show Angular
+      </button>
+    </div>
+  </div>
+</div>

@@ -26,8 +26,25 @@ export class OnewayDBComponent implements OnInit {
   }
 
   changeType():void{
-this.typeValue = 'text'
-this.buttonText = 'Hide Password'
+// this.typeValue = 'text'
+// this.buttonText = 'Hide Password'
+//      if(this.typeValue==='password'){
+//        this.typeValue = 'text'
+//         this.buttonText = 'Hide Password'
+//      } else {
+//        this.typeValue = 'password'
+//  this.buttonText = 'Show Password'
+//      }
+
+      if(this.typeValue==='password'){
+        this.typeValue='text'
+        this.buttonText = 'Hide Password'
+      } else {
+        this.typeValue = 'password'
+        this.buttonText = 'Show Password'
+      }
+
+
   }
 
   changeData():void {
