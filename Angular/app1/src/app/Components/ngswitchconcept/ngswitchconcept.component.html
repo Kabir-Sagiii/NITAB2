@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div [ngSwitch]="caseName">
+        <div *ngSwitchCase="'case1'" class="display-2 text-success">
+          This is Case 1
+        </div>
+        <div *ngSwitchCase="'case2'" class="display-2 text-success">
+          This is Case 2
+        </div>
+        <div *ngSwitchCase="'case3'" class="display-2 text-success">
+          This is Case 3
+        </div>
+        <div *ngSwitchCase="'case4'" class="display-2 text-success">
+          This is Case 4
+        </div>
+        <div *ngSwitchDefault class="display-2 text-danger">
+          Select any CASE between 1 to 4
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

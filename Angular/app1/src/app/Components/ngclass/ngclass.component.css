@@ -1,0 +1,18 @@
+.myDiv {
+    height: 500px;
+    width: 800px;
+    box-shadow: 0 0 10px black;
+    background: url("https://images.pexels.com/photos/3608311/pexels-photo-3608311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    padding: 30px;
+}
+.p1 {
+    background-color: rgba(255,0,0);
+
+    color: white;
+    padding: 50px;
+}
+.p2 {
+    color: white;
+    padding: 50px;
+    background-color: rgba(255, 0, 0,0.2);
+}

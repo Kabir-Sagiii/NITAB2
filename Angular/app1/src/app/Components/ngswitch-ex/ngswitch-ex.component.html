@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="btn-toolbar bg-danger text-white p-3">
+        <div class="btn-group">
+          <button class="btn btn-danger p-3" (click)="changePreview('basic')">
+            Basic Details
+          </button>
+          <button
+            class="btn btn-danger px-5"
+            (click)="changePreview('preview')"
+          >
+            Product Preview
+          </button>
+          <button
+            class="btn btn-danger px-5"
+            (click)="changePreview('description')"
+          >
+            Description
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div [ngSwitch]="selectedView">
+      <div *ngSwitchCase="'basic'">
+        <dl>
+          <dt>Product Name</dt>
+          <dd>{{ productDetails.pname }}</dd>
+          <dt>Product Price</dt>
+          <dd>{{ productDetails.price }}</dd>
+        </dl>
+      </div>
+
+      <div *ngSwitchCase="'preview'">
+        <dl>
+          <dt>Product Preview</dt>
+          <dd>
+            <img [src]="productDetails.image" height="200" width="200" />
+          </dd>
+        </dl>
+      </div>
+
+      <div *ngSwitchCase="'description'">
+        <dl>
+          <dt>Product Description</dt>
+          <dd>{{ productDetails.description }}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>

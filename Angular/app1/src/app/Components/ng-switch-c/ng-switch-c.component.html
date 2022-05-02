@@ -1,0 +1,66 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="btn-toolbar">
+        <div class="btn-group me-2">
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="changeStatus('basic')"
+          >
+            Basic Details
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="changeStatus('preview')"
+          >
+            Image Preview
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="changeStatus('desc')"
+          >
+            Description
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="changeStatus('rating')"
+          >
+            Rating
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col">
+      <div [ngSwitch]="btnStatus">
+        <div *ngSwitchCase="'basic'">
+          <dl>
+            <dt>Product Name</dt>
+            <dd>{{ productData.title }}</dd>
+            <dt>Product Price</dt>
+            <dd>{{ productData.price }}</dd>
+          </dl>
+        </div>
+        <div *ngSwitchCase="'preview'">
+          <img [src]="productData.image" width="200" height="200" />
+        </div>
+
+        <div *ngSwitchCase="'desc'">
+          <p>{{ productData.description }}</p>
+        </div>
+
+        <div *ngSwitchCase="'rating'">
+          <dl>
+            <dt>Product rating</dt>
+            <dd>{{ productData.rating.rate }}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

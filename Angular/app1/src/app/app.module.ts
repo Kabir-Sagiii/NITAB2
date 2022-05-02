@@ -23,7 +23,14 @@ import { ProductsComponent } from './Components/products/products.component';
 import { AttributebindingComponent } from './Components/attributebinding/attributebinding.component';
 import { TwowayDBComponent } from './Components/twoway-db/twoway-db.component';
 import { NgifComponent } from './Components/ngif/ngif.component';
-import { NgforComponent } from './Components/ngfor/ngfor.component'
+import { NgforComponent } from './Components/ngfor/ngfor.component';
+import { UsersProfileComponent } from './Components/users-profile/users-profile.component';
+import { NgIFwiththenelseComponent } from './Components/ng-ifwiththenelse/ng-ifwiththenelse.component';
+import { NgswitchconceptComponent } from './Components/ngswitchconcept/ngswitchconcept.component';
+import { NgswitchEXComponent } from './Components/ngswitch-ex/ngswitch-ex.component';
+import { UsersComponent } from './Components/users/users.component';
+import { NgSwitchCComponent } from './Components/ng-switch-c/ng-switch-c.component';
+import { NgclassComponent } from './Components/ngclass/ngclass.component'
 
 @NgModule({
   declarations: [
@@ -47,7 +54,14 @@ import { NgforComponent } from './Components/ngfor/ngfor.component'
     AttributebindingComponent,
     TwowayDBComponent,
     NgifComponent,
-    NgforComponent
+    NgforComponent,
+    UsersProfileComponent,
+    NgIFwiththenelseComponent,
+    NgswitchconceptComponent,
+    NgswitchEXComponent,
+    UsersComponent,
+    NgSwitchCComponent,
+    NgclassComponent
   ],
   imports: [
     BrowserModule,

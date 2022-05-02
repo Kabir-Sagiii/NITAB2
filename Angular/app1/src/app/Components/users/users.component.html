@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="row">
+          <div class="col-4">
+            <img
+              [src]="this.user[0].picture.medium"
+              width="100%"
+              height="100%"
+            />
+          </div>
+
+          <div class="col-8">
+            <dl>
+              <dt>NAME</dt>
+              <!-- <dd>{{this.user.results[0].name.first}}</dd> -->
+              <dd>
+                {{ this.user.length > 0 ? this.user[0].name.first : "No Data" }}
+              </dd>
+              <dt>Email</dt>
+              <dd>
+                {{ this.user.length > 0 ? this.user[0].email : "No Data" }}
+              </dd>
+              <dt>City</dt>
+              <dd>
+                {{
+                  this.user.length > 0 ? this.user[0].location.city : "No Data"
+                }}
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
