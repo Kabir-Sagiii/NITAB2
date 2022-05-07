@@ -12,10 +12,16 @@
                 type="text"
                 placeholder="Enter Username"
                 class="form-control"
+                [(ngModel)]="username"
               />
             </div>
             <div class="col-4">
-              <button class="btn btn-primary px-5">Search</button>
+              <button
+                class="btn btn-primary px-5"
+                (click)="getDataFromService()"
+              >
+                Search
+              </button>
             </div>
           </div>
         </div>

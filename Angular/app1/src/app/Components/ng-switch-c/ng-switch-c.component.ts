@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DemoSService} from '../../Services/demo-s.service'
+import {ServeSService} from '../../Services/serve-s.service'
 
 @Component({
   selector: 'app-ng-switch-c',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class NgSwitchCComponent implements OnInit {
   productData:any
   btnStatus:string = 'basic'
-  constructor() { }
+  constructor( private demoservice:DemoSService,private servers:ServeSService) { }
 
     getProductInformation(){
         fetch('https://fakestoreapi.com/products/5').then((res)=>{
@@ -24,6 +26,8 @@ export class NgSwitchCComponent implements OnInit {
 
   ngOnInit(): void {
      this.getProductInformation()
+    alert(this.demoservice.myFirstServiceProperty)
+    this.servers.getDataFromServer()
   }
 
 }

@@ -1,16 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <app-githubsearch></app-githubsearch>
+      <app-githubsearch
+        (customEvent)="getDataFromGithubSearch($event)"
+      ></app-githubsearch>
     </div>
   </div>
 
   <div class="row">
     <div class="col-4">
-      <app-githubprofile></app-githubprofile>
+      <app-githubprofile [userProfileDetails]="userDetails"></app-githubprofile>
     </div>
     <div class="col-8">
-      <app-githubdetails></app-githubdetails>
+      <app-githubdetails [userDetails]="userDetails"></app-githubdetails>
     </div>
   </div>
 </div>

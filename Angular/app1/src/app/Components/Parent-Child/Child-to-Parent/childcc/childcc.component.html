@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <h3>Child Component</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <input type="text" class="form-control" #input />
+            </div>
+            <div class="col-4">
+              <button class="btn btn-secondary" (click)="getChildData(input)">
+                Send Data to Parent
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

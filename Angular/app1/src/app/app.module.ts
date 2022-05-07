@@ -30,7 +30,12 @@ import { NgswitchconceptComponent } from './Components/ngswitchconcept/ngswitchc
 import { NgswitchEXComponent } from './Components/ngswitch-ex/ngswitch-ex.component';
 import { UsersComponent } from './Components/users/users.component';
 import { NgSwitchCComponent } from './Components/ng-switch-c/ng-switch-c.component';
-import { NgclassComponent } from './Components/ngclass/ngclass.component'
+import { NgclassComponent } from './Components/ngclass/ngclass.component';
+import { NgStyleCComponent } from './Components/ng-style-c/ng-style-c.component';
+import { ParentCComponent } from './Components/Parent-Child/Parent-to-Child/parent-c/parent-c.component';
+import { ChildcComponent } from './Components/Parent-Child/Parent-to-Child/childc/childc.component';
+import { ParentccComponent } from './Components/Parent-Child/Child-to-Parent/parentcc/parentcc.component';
+import { ChildccComponent } from './Components/Parent-Child/Child-to-Parent/childcc/childcc.component'
 
 @NgModule({
   declarations: [
@@ -61,7 +66,12 @@ import { NgclassComponent } from './Components/ngclass/ngclass.component'
     NgswitchEXComponent,
     UsersComponent,
     NgSwitchCComponent,
-    NgclassComponent
+    NgclassComponent,
+    NgStyleCComponent,
+    ParentCComponent,
+    ChildcComponent,
+    ParentccComponent,
+    ChildccComponent
   ],
   imports: [
     BrowserModule,
