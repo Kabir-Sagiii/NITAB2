@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms'
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +36,19 @@ import { NgStyleCComponent } from './Components/ng-style-c/ng-style-c.component'
 import { ParentCComponent } from './Components/Parent-Child/Parent-to-Child/parent-c/parent-c.component';
 import { ChildcComponent } from './Components/Parent-Child/Parent-to-Child/childc/childc.component';
 import { ParentccComponent } from './Components/Parent-Child/Child-to-Parent/parentcc/parentcc.component';
-import { ChildccComponent } from './Components/Parent-Child/Child-to-Parent/childcc/childcc.component'
+import { ChildccComponent } from './Components/Parent-Child/Child-to-Parent/childcc/childcc.component';
+import { HttpclientComponent } from './Components/httpclient/httpclient.component';
+import { ClientCComponent } from './Components/SChatApp/client-c/client-c.component';
+import { ServerCComponent } from './Components/SChatApp/server-c/server-c.component';
+import { HomeCCComponent } from './Components/SChatApp/home-cc/home-cc.component';
+import { EmpProfileComponent } from './Components/emp-profile/emp-profile.component';
+import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.component';
+import { HomeCComponent } from './Components/home-c/home-c.component';
+import { CategoryComponent } from './Components/Internal_Routing/category/category.component';
+import { ElectronicsComponent } from './Components/Internal_Routing/electronics/electronics.component';
+import { JewellaryComponent } from './Components/Internal_Routing/jewellary/jewellary.component';
+import { MensClothingComponent } from './Components/Internal_Routing/mens-clothing/mens-clothing.component';
+import { WomensClothingComponent } from './Components/Internal_Routing/womens-clothing/womens-clothing.component'
 
 @NgModule({
   declarations: [
@@ -71,12 +84,25 @@ import { ChildccComponent } from './Components/Parent-Child/Child-to-Parent/chil
     ParentCComponent,
     ChildcComponent,
     ParentccComponent,
-    ChildccComponent
+    ChildccComponent,
+    HttpclientComponent,
+    ClientCComponent,
+    ServerCComponent,
+    HomeCCComponent,
+    EmpProfileComponent,
+    PagenotfoundComponent,
+    HomeCComponent,
+    CategoryComponent,
+    ElectronicsComponent,
+    JewellaryComponent,
+    MensClothingComponent,
+    WomensClothingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

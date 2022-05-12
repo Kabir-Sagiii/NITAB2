@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-success text-white text-center">
+          <h2>Home Component</h2>
+        </div>
+        <div class="card-body p-5">
+          <div class="row">
+            <div class="col-6">
+              <app-client-c
+                (customEvent)="getDataFromClient($event)"
+              ></app-client-c>
+            </div>
+            <div class="col-6">
+              <app-server-c [homeData]="clientData"></app-server-c>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.mainContainer {
+    background-image: url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    
+   height: 100vh;
+}
+.subContainer {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.6);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    margin: 0px 30px;
+}
