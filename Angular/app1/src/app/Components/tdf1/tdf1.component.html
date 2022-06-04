@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>Template Driven Form</h3>
+        </div>
+        <div class="card-body">
+          <form #form="ngForm">
+            <dl>
+              <dt>User Name</dt>
+              <dd>
+                <input required type="text" name="uname" ngModel />
+              </dd>
+
+              <!-- <select
+                  class="form-select"
+                  (change)="validateCity($event)"
+                  [ngClass]="{
+                    valid: cityError === '',
+                    invalid: cityError !== ''
+                  }"
+                >
+                  <option value="nocity">Select the City</option>
+                  <option value="hyd">Hyderabad</option>
+                  <option value="mumbai">Mumbai</option>
+                </select> -->
+
+              <!-- <dd class="text-danger">
+                {{ cityError }}
+              </dd> -->
+            </dl>
+            <button type="submit" class="btn w-100 btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <dl>
+        <dt>Prinstine</dt>
+        <dd>{{ form.pristine }}</dd>
+        <dt>Dirty</dt>
+        <dd>{{ form.dirty }}</dd>
+        <dt>Valid</dt>
+        <dd>{{ form.valid }}</dd>
+        <dt>Invalid</dt>
+        <dd>{{ form.invalid }}</dd>
+        <dt>Submitted</dt>
+        <dd>{{ form.submitted }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

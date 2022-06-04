@@ -21,6 +21,11 @@ import { ElectronicsComponent } from './Components/Internal_Routing/electronics/
 import { JewellaryComponent } from './Components/Internal_Routing/jewellary/jewellary.component';
 import { MensClothingComponent } from './Components/Internal_Routing/mens-clothing/mens-clothing.component';
 import { WomensClothingComponent } from './Components/Internal_Routing/womens-clothing/womens-clothing.component';
+import { ProductDetailsComponent } from './Components/product-details/product-details.component';
+import { TemplateDFComponent } from './Components/template-df/template-df.component';
+import { ReactiveFormsComponent } from './Components/reactive-forms/reactive-forms.component';
+import { AngularMaterialComponent } from './Components/angular-material/angular-material.component';
+import { AdmincComponent } from './admin/components/admin/adminc/adminc.component';
 
 const routes: Routes = [
   {
@@ -72,6 +77,21 @@ const routes: Routes = [
           path:'womenc',component:WomensClothingComponent
         }
     ]
+  },
+  {
+    path:"productDetails/:id",component:ProductDetailsComponent
+  },
+  {
+path:"tdf",component:TemplateDFComponent
+  },
+  {
+path:"mdf",component:ReactiveFormsComponent
+  },
+  {
+path:"am",component:AngularMaterialComponent
+  },
+  {
+path:"admin",component:AdmincComponent
   },
   {
     path:"**",component:PagenotfoundComponent

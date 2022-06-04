@@ -1,0 +1,88 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h3>Template Driven form</h3>
+        </div>
+
+        <div class="card-body">
+          <form #myForm="ngForm" (submit)="getData($event)">
+            <dl>
+              <dt>User Name</dt>
+              <dd>
+                <input
+                  required
+                  minlength="5"
+                  type="text"
+                  [ngClass]="{
+                    valid: myForm.submitted && uname.valid,
+                    invalid: myForm.submitted && uname.invalid
+                  }"
+                  class="form-control"
+                  name="uname"
+                  ngModel
+                  #uname="ngModel"
+                />
+              </dd>
+              <dd *ngIf="uname.touched && uname.errors">
+                <span class="text-danger" *ngIf="uname.errors['required']"
+                  >username is Required</span
+                >
+                <span class="text-danger" *ngIf="uname.errors['minlength']"
+                  >Minimum 5 Characters are Required</span
+                >
+              </dd>
+              <dt>Phone No</dt>
+              <dd>
+                <input
+                  required
+                  pattern="\+91[0-9]{10}"
+                  type="text"
+                  class="form-control"
+                  name="phone"
+                  ngModel
+                  #phone="ngModel"
+                  [ngClass]="{
+                    valid: myForm.submitted && phone.valid,
+                    invalid: myForm.submitted && phone.invalid
+                  }"
+                />
+              </dd>
+              <dd *ngIf="myForm.submitted && phone.errors">
+                <span class="text-danger" *ngIf="phone.errors['required']"
+                  >Phone is Required</span
+                >
+                <span class="text-danger" *ngIf="phone.errors['pattern']"
+                  >Enter Number in Exact format</span
+                >
+              </dd>
+            </dl>
+            <button type="submit" class="btn btn-success w-100">Login</button>
+            <button
+              [disabled]="myForm.pristine"
+              type="submit"
+              class="btn mt-3 btn-success w-100"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <dl>
+        <dt>Pristine</dt>
+        <dd>{{ myForm.pristine }}</dd>
+        <dt>Dirty</dt>
+        <dd>{{ myForm.dirty }}</dd>
+        <dt>Valid</dt>
+        <dd>{{ myForm.valid }}</dd>
+        <dt>Invalid</dt>
+        <dd>{{ myForm.invalid }}</dd>
+        <dt>Submitted</dt>
+        <dd>{{ myForm.submitted }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms'
+import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
+import {MatSliderModule} from '@angular/material/slider';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {AdminModule} from './admin/admin.module'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,7 +55,13 @@ import { CategoryComponent } from './Components/Internal_Routing/category/catego
 import { ElectronicsComponent } from './Components/Internal_Routing/electronics/electronics.component';
 import { JewellaryComponent } from './Components/Internal_Routing/jewellary/jewellary.component';
 import { MensClothingComponent } from './Components/Internal_Routing/mens-clothing/mens-clothing.component';
-import { WomensClothingComponent } from './Components/Internal_Routing/womens-clothing/womens-clothing.component'
+import { WomensClothingComponent } from './Components/Internal_Routing/womens-clothing/womens-clothing.component';
+import { ProductDetailsComponent } from './Components/product-details/product-details.component';
+import { TemplateDFComponent } from './Components/template-df/template-df.component';
+import { Tdf1Component } from './Components/tdf1/tdf1.component';
+import { ReactiveFormsComponent } from './Components/reactive-forms/reactive-forms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialComponent } from './Components/angular-material/angular-material.component'
 
 @NgModule({
   declarations: [
@@ -96,13 +109,28 @@ import { WomensClothingComponent } from './Components/Internal_Routing/womens-cl
     ElectronicsComponent,
     JewellaryComponent,
     MensClothingComponent,
-    WomensClothingComponent
+    WomensClothingComponent,
+    ProductDetailsComponent,
+    TemplateDFComponent,
+    Tdf1Component,
+    ReactiveFormsComponent,
+    AngularMaterialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

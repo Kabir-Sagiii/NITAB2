@@ -1,0 +1,110 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+          <h3>Reactive Forms</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="formReg" (submit)="getFormData()">
+            <dl>
+              <dt>User Name</dt>
+              <dd>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="name"
+                />
+              </dd>
+              <dd *ngIf="submitted && formReg.controls['name'].errors">
+                <span
+                  class="text-danger"
+                  *ngIf="formReg.controls['name'].errors['required']"
+                  >UserName Required</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="formReg.controls['name'].errors['minlength']"
+                  >Minimum 5 Characters are Required</span
+                >
+              </dd>
+              <dt>Password</dt>
+              <dd>
+                <input
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                />
+              </dd>
+              <dd *ngIf="submitted && formReg.controls['password'].errors">
+                <span
+                  class="text-danger"
+                  *ngIf="formReg.controls['password'].errors['required']"
+                  >Password Required</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="formReg.controls['password'].errors['minlength']"
+                  >Password Should have minimum 5 character</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="formReg.controls['password'].errors['maxlength']"
+                  >Password Should be max 10 characters</span
+                >
+              </dd>
+              <dt>Email</dt>
+              <dd>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="email"
+                />
+              </dd>
+              <dd *ngIf="submitted && formReg.controls['email'].errors">
+                <span
+                  class="text-danger"
+                  *ngIf="formReg.controls['email'].errors['required']"
+                  >Email is Required</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="formReg.controls['email'].errors['email']"
+                  >Enter Proper Email Id</span
+                >
+              </dd>
+            </dl>
+            <button type="submit" class="btn btn-primary my-2 mx-2 px-3">
+              Register
+            </button>
+            <button class="btn btn-primary my-2 px-3" (click)="resetValues()">
+              Reset
+            </button>
+            <button
+              class="btn btn-primary mx-2 my-2 px-3"
+              (click)="setValues()"
+            >
+              SetToDefaultValues
+            </button>
+            <button
+              class="btn btn-primary mx-2 my-2 px-3"
+              (click)="partialUpdate()"
+            >
+              Parital Updation
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <dl>
+        <dt>User Name</dt>
+        <dd>{{ formReg.value.name }}</dd>
+        <dt>PAssword</dt>
+        <dd>{{ formReg.value.password }}</dd>
+        <dt>Email</dt>
+        <dd>{{ formReg.controls["email"].value }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
